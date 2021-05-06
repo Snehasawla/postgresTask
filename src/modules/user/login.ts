@@ -10,8 +10,6 @@ export class LoginResolver{
         return "Hello World";
     }
 
-
-
     @Mutation(() => String, {nullable: true})
     async login(
         @Arg("email") email: string,

@@ -8,7 +8,7 @@ export class UpdatePostResolver{
     @Mutation(() => Post)
     async updatePost(@Arg("data") data: UpdatePostInput): Promise<Post | null>
      {
-    const post = await Post.findOne({where: { }});
+    const post = await Post.findOne({where: {  }});
     if (!post) throw new Error("Post not found!");
     Object.assign(post, data);
     await post.save();
